@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup Health Connect - VeloFriend</title>
+    <style>
+        :root {
+            --primary: #FF5722;
+            --hc-blue: #4285F4;
+            --dark: #111827;
+            --light: #F9FAFB;
+            --text: #374151;
+            --border: #E5E7EB;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        header {
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+        .hc-logo {
+            width: 60px;
+            height: 60px;
+            background: var(--hc-blue);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
+        }
+        h1 {
+            color: var(--dark);
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 800;
+        }
+        h2 {
+            color: var(--dark);
+            margin-top: 40px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .step-num {
+            background: var(--primary);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: 800;
+        }
+        p, li {
+            font-size: 0.95rem;
+            color: #4B5563;
+        }
+        .tip {
+            background: #EFF6FF;
+            border-left: 4px solid var(--hc-blue);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .screenshot-placeholder {
+            background: #f3f4f6;
+            height: 200px;
+            border-radius: 12px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            font-style: italic;
+            border: 2px dashed #d1d5db;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: #9CA3AF;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="index.html" class="back-link">← Back to Home</a>
+
+    <header>
+        <div class="hc-logo">⚡</div>
+        <h1>Syncing with Health Connect</h1>
+        <p>Connect VeloFriend to your ecosystem of fitness apps.</p>
+    </header>
+
+    <section>
+        <p>VeloFriend uses Google's <b>Health Connect</b> to securely pull your cycling activities from apps like Strava, Garmin Connect, and Samsung Health. This data fuels your Velo-Gotchi and helps our AI determine your Rider DNA.</p>
+
+        <div class="tip">
+            <b>Why sync?</b> Automated syncing means every ride counts toward your evolution, even if you forget to open VeloFriend before hitting the road.
+        </div>
+
+        <h2><div class="step-num">1</div> Check Compatibility</h2>
+        <p>If you are on <b>Android 14 or higher</b>, Health Connect is built into your system settings. If you are on <b>Android 13 or lower</b>, you may need to download the Health Connect app from the Google Play Store.</p>
+
+        <h2><div class="step-num">2</div> Enable in VeloFriend</h2>
+        <p>Open the VeloFriend app and navigate to your <b>Profile</b> screen. Tap the <b>Settings</b> icon (gear) in the top right corner.</p>
+        <p>Look for the <b>"Google Health Connect"</b> toggle and switch it on.</p>
+
+        <h2><div class="step-num">3</div> Grant Permissions</h2>
+        <p>A system dialog will appear asking you to grant VeloFriend permission to access your health data. To get the best experience, we recommend enabling:</p>
+        <ul>
+            <li><b>Distance:</b> To track your mileage.</li>
+            <li><b>Exercise:</b> To detect and sync your cycling sessions.</li>
+            <li><b>Active Calories Burned:</b> (Optional) For advanced Rider DNA metrics.</li>
+        </ul>
+
+        <h2><div class="step-num">4</div> Sync Your Other Apps</h2>
+        <p>Ensure that your primary tracking app (like Strava or Garmin) is also connected to Health Connect. Most apps have this setting under "Data Sharing" or "Connected Apps".</p>
+        <div class="tip">
+            VeloFriend reads data <i>from</i> Health Connect that other apps have written <i>to</i> it.
+        </div>
+
+        <h2>Troubleshooting</h2>
+        <h3>My rides aren't appearing</h3>
+        <p>It can sometimes take a few minutes for new data to propagate. Ensure both VeloFriend and your tracking app have "Read/Write" permissions enabled in the Android Health Connect settings menu.</p>
+
+        <h3>Local AI Processing</h3>
+        <p>Remember: VeloFriend processes all synced health data <b>locally on your phone</b>. Your raw heart rate or power data is never sent to our servers; we only store the resulting "Athlete Type" badge if you choose to display it.</p>
+    </section>
+</div>
+
+<footer>
+    &copy; 2026 VeloFriend. Built for the ride.
+</footer>
+
+</body>
+</html>
