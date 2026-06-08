@@ -98,6 +98,23 @@
             color: #9CA3AF;
         }
         ul { padding-left: 20px; }
+        .visibility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .visibility-card {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+        }
+        .visibility-card h4 {
+            margin: 0 0 10px;
+            color: var(--primary);
+            font-size: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -107,10 +124,10 @@
 
     <header>
         <div class="logo-container">
-            <img src="iconwhite.png" alt="VeloFriend Logo">
+            <img src="app/src/main/res/drawable/iconwhite.png" alt="VeloFriend Logo">
             <h1>Privacy Policy</h1>
         </div>
-        <p><b>Last Updated:</b> April 2026</p>
+        <p><b>Last Updated:</b> May 2026</p>
     </header>
 
     <section>
@@ -121,33 +138,49 @@
         </div>
     </section>
 
-    <h2>1. The Velo Beacon & Location</h2>
-    <p>The core social feature of VeloFriend is the <b>Velo Beacon</b>. When you activate "Ready to Ride":</p>
+    <h2>1. Visibility & The Velo Beacon</h2>
+    <p>VeloFriend offers three levels of visibility to ensure you are always in control of your digital presence:</p>
+
+    <div class="visibility-grid">
+        <div class="visibility-card">
+            <h4>Private (Stealth)</h4>
+            <p><b>Profile Not Public:</b> You are entirely invisible to other users. You do not appear in discovery or search, and your location is never shared. The Beacon is disabled.</p>
+        </div>
+        <div class="visibility-card">
+            <h4>Public Profile</h4>
+            <p><b>Social Presence:</b> You are visible in "Discovery" so friends can find you. A <b>fuzzed location</b> (randomly offset) is shown on the map to indicate your general area without revealing your exact coordinates.</p>
+        </div>
+        <div class="visibility-card">
+            <h4>Beacon Active</h4>
+            <p><b>Ready to Ride:</b> Your <b>real-time location</b> is shared on the map for up to 1 hour to help others find you for a meetup. This requires a Public Profile.</p>
+        </div>
+    </div>
+
+    <p><b>Location Privacy Controls:</b></p>
     <ul>
-        <li><b>Real-Time Location:</b> Your GPS coordinates are shared with other nearby VeloFriend users for a limited duration (15 minutes).</li>
-        <li><b>Visibility Tiers:</b> You can choose to "fuzz" your location in settings, which adds a random offset to your marker for increased privacy.</li>
-        <li><b>Public Profile Requirement:</b> Activating the beacon requires your profile to be set to "Public" so others can identify who is signaling.</li>
+        <li><b>Area Fuzzing:</b> Even when the beacon is active, you can choose to add a random offset to your marker in settings, showing a general area instead of your exact coordinate.</li>
+        <li><b>Privacy Zones:</b> You can define "No-Ride Zones" (like home or work) where location sharing will automatically disable for your protection.</li>
     </ul>
 
     <h2>2. Health Data & Athlete Type</h2>
     <p>We access fitness data via <b>Google Health Connect</b> or manual input to fuel your Velo-Gotchi and calculate your Rider DNA.</p>
     <ul>
-        <li><b>Local AI Analysis:</b> Our algorithms (SportPersonalityLogic) process your distance, speed, and intensity <b>locally on your device</b> to determine your Athlete Type (e.g., Speed Demon, Endurance Master).</li>
-        <li><b>Storage:</b> Only the resulting "Badge" or "Athlete Type" name is stored on our secure servers if you choose to display it on your public profile. Your raw, minute-by-minute heart rate or power data is NOT uploaded.</li>
+        <li><b>Local AI Analysis:</b> Our algorithms process your fitness patterns <b>locally on your device</b> to determine your Athlete Archetype.</li>
+        <li><b>Storage:</b> Only the resulting "Archetype" label is stored on our secure servers if you choose to display it. Your raw, second-by-second activity data is NOT uploaded.</li>
     </ul>
 
     <h2>3. Social Interactions</h2>
     <p>When you interact with the community:</p>
     <ul>
-        <li><b>Waves & Join Requests:</b> Sending a "Wave" or a "Join Ride" request shares your nickname and current location with the recipient to facilitate the meetup.</li>
-        <li><b>Velo-Gotchi:</b> Other users can see your Velo-Gotchi's name and evolution stage, but not your specific training volume.</li>
+        <li><b>Waves & Join Requests:</b> Sending a "Wave" shares your nickname and fuzzed location with the recipient to facilitate the meetup via our secure chat.</li>
+        <li><b>Velo-Gotchi:</b> Other users can see your Velo-Gotchi's evolution stage, but not your private training logs.</li>
     </ul>
 
     <h2>4. Data Control & Deletion</h2>
     <p>You have full control over your data footprint:</p>
     <ul>
         <li><b>Revoke Access:</b> You can disconnect Health Connect at any time via Android System Settings.</li>
-        <li><b>Go Stealth:</b> You can switch your profile to "Private" to instantly disappear from the live map and discovery features.</li>
+        <li><b>Go Stealth:</b> Switching your profile to "Private" instantly removes you from all live discovery features.</li>
         <li><b>Account Deletion:</b> Deleting your account via the app settings permanently purges your profile, friendship links, and history from our systems.</li>
     </ul>
 
